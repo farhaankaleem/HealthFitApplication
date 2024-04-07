@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
         val bmi = findViewById<ImageView>(R.id.imgBMI)
         val run = findViewById<ImageView>(R.id.imgRun)
         val water = findViewById<ImageView>(R.id.imgWater)
+        val workout = findViewById<ImageView>(R.id.imgYoga)
 
         bmi.setOnClickListener{
             val i = Intent(this, BMIActivity::class.java)
@@ -30,6 +31,11 @@ class HomeActivity : AppCompatActivity() {
 
         water.setOnClickListener{
             val i = Intent(this, WaterTrackerActivity::class.java)
+            startActivity(i)
+        }
+
+        workout.setOnClickListener{
+            val i = Intent(this, WorkoutListActivity::class.java)
             startActivity(i)
         }
     }
