@@ -54,10 +54,10 @@
         app:layout_constraintVertical_bias="0.899" >
 
         <ImageView
-            android:id="@+id/imgTips"
+            android:id="@+id/imgWater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/tips" />
+            app:srcCompat="@drawable/water" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

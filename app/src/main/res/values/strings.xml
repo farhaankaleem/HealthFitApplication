@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HealthFitApplication</string>
+    <string name="_1_water">+1 Glass</string>
+    <string name="_0">0</string>
+    <string name="you_drank_these_many_liters_of_water">Glasses of water today</string>
 </resources>
