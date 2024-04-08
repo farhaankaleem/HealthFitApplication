@@ -875,7 +875,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="monospace"
-                                android:text="Plank with Leg Left"
+                                android:text="Plank with Leg Lift"
                                 android:textColor="#ff000000"
                                 android:textStyle="bold"
                                 android:textSize="15dp"/>
