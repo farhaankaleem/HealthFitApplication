@@ -24,6 +24,7 @@ class WorkoutListActivity : AppCompatActivity() {
                 val value = index + 1;
                 Log.i("FIRST", value.toString());
                 val i = Intent(this, WorkoutExplain::class.java)
+                i.putExtra("workoutNo", value.toString())
                 startActivity(i)
             }
         }
