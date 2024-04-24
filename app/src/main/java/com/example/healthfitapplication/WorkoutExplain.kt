@@ -1,14 +1,10 @@
 package com.example.healthfitapplication
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 
 class WorkoutExplain : AppCompatActivity() {
     private val workoutLayouts = mapOf(
@@ -61,7 +57,7 @@ class WorkoutExplain : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-
+        finish()
     }
 
     private fun stopTimer () {
@@ -86,19 +82,7 @@ class WorkoutExplain : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                var newValue = workoutNo + 1
-                if (newValue <= 15) {
-                    val i = Intent(this@WorkoutExplain, WorkoutExplain::class.java)
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    i.putExtra("workoutNo", newValue.toString())
-                    startActivity(i)
-                } else {
-                    newValue = 1
-                    val i = Intent(this@WorkoutExplain, WorkoutExplain::class.java)
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    i.putExtra("workoutNo", newValue.toString())
-                    startActivity(i)
-                }
+                finish()
             }
         }.start()
         startButton.setText("PAUSE")
