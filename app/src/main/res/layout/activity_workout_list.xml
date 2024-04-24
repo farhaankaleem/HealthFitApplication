@@ -7,14 +7,15 @@
     android:orientation="vertical"
     tools:context=".WorkoutListActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <SearchView
+        android:id="@+id/searchBar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
-        android:textAlignment="textEnd"
-        app:title="Workouts"
-        app:titleTextColor="#FFF"/>
+        android:layout_height="wrap_content"
+        android:queryHint="Search Workouts"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:id="@+id/workoutListContainer"
                 >
 
                 <LinearLayout

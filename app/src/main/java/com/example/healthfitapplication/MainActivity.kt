@@ -7,32 +7,33 @@ import android.os.Handler
 import android.os.Looper
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.TextView
+import com.example.healthfitapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     private lateinit var up: Animation
     private lateinit var down: Animation
-    private lateinit var imgView: ImageView
-    private lateinit var textView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.hide()
-        imgView = findViewById(R.id.fitnesstracker)
-        up = AnimationUtils.loadAnimation(this, R.anim.up)
-        imgView.setAnimation(up)
+        binding.fitnesstracker.apply {
+            up = AnimationUtils.loadAnimation(context, R.anim.up)
+            animation = up
+        }
 
+        binding.title.apply {
+            down = AnimationUtils.loadAnimation(context, R.anim.down)
+            animation = down
+        }
 
-        textView = findViewById(R.id.title)
-        down = AnimationUtils.loadAnimation(this, R.anim.down)
-        textView.setAnimation(down)
-
-        Handler(Looper.getMainLooper()).postDelayed(
-            {
-                val i = Intent(this, HomeActivity::class.java)
-                startActivity(i)
-            } , 3000)
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, HomepageActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
     }
 }

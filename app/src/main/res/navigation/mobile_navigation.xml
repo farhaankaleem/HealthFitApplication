@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.healthfitapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_run"
+        android:name="com.example.healthfitapplication.ui.running.RunningFragment"
+        android:label="@string/menu_run"
+        tools:layout="@layout/activity_running" />
+
+    <fragment
+        android:id="@+id/nav_water"
+        android:name="com.example.healthfitapplication.ui.waterTracker.WaterTrackerFragment"
+        android:label="@string/menu_water"
+        tools:layout="@layout/activity_water_tracker" />
+
+    <fragment
+        android:id="@+id/nav_workout"
+        android:name="com.example.healthfitapplication.ui.workout.WorkoutListFragment"
+        android:label="@string/menu_workout"
+        tools:layout="@layout/activity_workout_list" />
+
+    <fragment
+        android:id="@+id/nav_BMI"
+        android:name="com.example.healthfitapplication.ui.bmi.BMIFragment"
+        android:label="@string/menu_bmi"
+        tools:layout="@layout/activity_bmi" />
+</navigation>
