@@ -7,17 +7,19 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import com.example.healthfitapplication.databinding.ActivityRunningBinding
 import android.widget.Toast
 
 class RunningActivity : AppCompatActivity(), SensorEventListener {
 
-    var sensor: Sensor? = null
-    var sensorMgr: SensorManager? = null
+    private lateinit var binding: ActivityRunningBinding
+    private var sensor: Sensor? = null
+    private var sensorMgr: SensorManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_running)
+        binding = ActivityRunningBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         sensorMgr = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         sensor = sensorMgr!!.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
@@ -32,13 +34,13 @@ class RunningActivity : AppCompatActivity(), SensorEventListener {
         }
     }
 
-    override fun onSensorChanged(p0: SensorEvent?) {
-        val stepsTaken = p0!!.values[0]
-        var steps = findViewById<TextView>(R.id.stepsTaken)
-        steps.text = stepsTaken.toString()
+    override fun onSensorChanged(event: SensorEvent?) {
+        event?.let {
+            val stepsTaken = it.values[0]
+            binding.stepsTaken.text = stepsTaken.toString()
+        }
     }
 
-    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
     }
 }

@@ -1,27 +1,32 @@
-package com.example.healthfitapplication
+package com.example.healthfitapplication.ui.workout
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.healthfitapplication.WorkoutExplain
 import com.example.healthfitapplication.databinding.ActivityWorkoutListBinding
 
-class WorkoutListActivity : AppCompatActivity() {
+class WorkoutListFragment : Fragment() {
     private lateinit var binding: ActivityWorkoutListBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityWorkoutListBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
-        setupWorkoutClickListeners()
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        binding = ActivityWorkoutListBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val i = Intent(this, HomeActivity::class.java)
-        startActivity(i)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupWorkoutClickListeners()
     }
 
     private fun setupWorkoutClickListeners() {
@@ -38,8 +43,9 @@ class WorkoutListActivity : AppCompatActivity() {
 
     private fun poseClicked(value: Int) {
         Log.i("FIRST", value.toString())
-        val intent = Intent(this, WorkoutExplain::class.java)
+        val intent = Intent(requireContext(), WorkoutExplain::class.java)
         intent.putExtra("workoutNo", value.toString())
         startActivity(intent)
     }
 }
+
