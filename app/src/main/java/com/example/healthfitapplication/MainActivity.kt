@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, HomepageActivity::class.java)
+            val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
             finish()
         }, 3000)

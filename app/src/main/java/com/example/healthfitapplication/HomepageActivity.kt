@@ -1,6 +1,8 @@
 package com.example.healthfitapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
@@ -16,6 +18,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthfitapplication.databinding.ActivityHomepageBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth.AuthStateListener
 
 class HomepageActivity : AppCompatActivity() {
 
@@ -49,6 +53,34 @@ class HomepageActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logout -> {
+                logout(item)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    fun logout(menuItem: MenuItem) {
+        Log.d("HomepageActivity", "Clicked on Logout!!!")
+
+        val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val authStateListener = AuthStateListener { firebaseAuth ->
+            if (firebaseAuth.currentUser == null) {
+                Toast.makeText(this, "User logged out", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginPage::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+        firebaseAuth.addAuthStateListener(authStateListener)
+        firebaseAuth.signOut()
+        firebaseAuth.removeAuthStateListener(authStateListener)
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

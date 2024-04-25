@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683666262055",
+    "project_id": "healthtracker-26a21",
+    "storage_bucket": "healthtracker-26a21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683666262055:android:957bcc3a964cbd23b56602",
+        "android_client_info": {
+          "package_name": "com.example.healthfitapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683666262055-omg55lotftvb6miij17vr9hsl3ot7f9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTAeY_t6zvV-K3H-jLWigoVgxgviw6jwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683666262055-omg55lotftvb6miij17vr9hsl3ot7f9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
