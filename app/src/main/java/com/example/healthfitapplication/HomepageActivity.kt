@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
 import com.google.android.material.snackbar.Snackbar
@@ -42,9 +43,27 @@ class HomepageActivity : AppCompatActivity() {
         }
 
         val navView: NavigationView = binding.navView
+        val headerView = navView.getHeaderView(0)
+        val userNameTextView: TextView = headerView.findViewById(R.id.userName)
+        val userEmailTextView: TextView = headerView.findViewById(R.id.userEmail)
+
+        val firebaseAuth = FirebaseAuth.getInstance()
+        val firebaseUser = firebaseAuth.currentUser
+
+        if (firebaseUser != null) {
+            val userEmail = firebaseUser.email
+            val userName = firebaseUser.displayName
+
+            userEmailTextView.text = userEmail
+            userNameTextView.text = userName
+
+            Log.d("User Info", "Email: $userEmail")
+            Log.d("User Info", "Name: $userName")
+        } else {
+            Log.e("User Info", "User is not logged in")
+        }
+
         val navController = findNavController(R.id.nav_host_fragment_content_homepage)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_run, R.id.nav_water, R.id.nav_BMI, R.id.nav_workout,
