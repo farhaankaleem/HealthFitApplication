@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "683666262055-omg55lotftvb6miij17vr9hsl3ot7f9q.apps.googleusercontent.com",
+          "client_id": "683666262055-6q2evmlk8rlqbum6kathmk35t6pn44hi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthfitapplication",
+            "certificate_hash": "884305490196c889041ebbcf5cd55b40215b4e37"
+          }
+        },
+        {
+          "client_id": "683666262055-pihuffg7rsfl8i2bm0i36dtf5pul4ec5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
