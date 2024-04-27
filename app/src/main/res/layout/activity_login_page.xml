@@ -29,7 +29,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,12 +58,21 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_height="40dp"
+        android:layout_width="40dp"/>
+
     <Button
         android:id="@+id/sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:textSize="20dp"
         android:background="@drawable/round_btn"
         android:text="SIGN IN"/>
