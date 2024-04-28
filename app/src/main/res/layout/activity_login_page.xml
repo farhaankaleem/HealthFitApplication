@@ -101,4 +101,15 @@
             android:textColor="@color/teal_700"
             android:layout_marginLeft="10dp"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/sign_in_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        android:background="@drawable/common_google_signin_btn_icon_dark"
+        android:text="SIGN IN"/>
 </LinearLayout>

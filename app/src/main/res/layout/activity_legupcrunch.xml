@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white">
+    android:background="?attr/colorOnPrimary">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,6 +11,38 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.HealthFitApplication.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorOnTertiary">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/leftarrow"
+                        android:tint="?attr/color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/workout7"
+                        android:textColor="?attr/color"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
 
             <pl.droidsonroids.gif.GifImageView
                 android:layout_marginTop="10dp"
@@ -29,7 +60,7 @@
                 android:text="01:00"
                 android:textSize="28sp"
                 android:padding="15dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="?attr/colorOnPrimary"
                 android:background="@drawable/timerbutton"
                 />
 
@@ -54,35 +85,16 @@
                 android:textSize="25sp"
                 android:padding="7dp"
                 android:textStyle="bold"
+                android:textColor="?attr/color"
                 android:background="@drawable/howbuttonbg"/>
 
-            <androidx.cardview.widget.CardView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:cardCornerRadius="20dp"
-                android:background="#eceaef"
-                android:layout_marginBottom="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="#eceaef"
-                    android:layout_marginTop="25dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#eceaef"
-                        android:text="@string/pose7"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/pose7"
+                android:textColor="?attr/color"
+                android:textSize="18sp"/>
 
         </LinearLayout>
     </ScrollView>

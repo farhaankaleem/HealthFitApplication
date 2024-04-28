@@ -48,6 +48,21 @@
     <string name="pose15"> Step 1:- Stand, extend arms 90° to sides, bend forward 90° at waist.\n\n
  Step 2:- Looking at the floor, rotate torso to touch hand to foot, rotate for other hand. \n\n
  Step 3:- Head will follow chest action. </string>
+    <string name="workout1">Mountain Climber</string>
+    <string name="workout2">Basic Crunches</string>
+    <string name="workout3">Bench Dips</string>
+    <string name="workout4">Bicycle Crunches</string>
+    <string name="workout5">Leg Raise</string>
+    <string name="workout6">Alternative Heel Touch</string>
+    <string name="workout7">Leg up Crunches</string>
+    <string name="workout8">Sit Up</string>
+    <string name="workout9">Alternative V UPS</string>
+    <string name="workout10">Planks</string>
+    <string name="workout11">Planks with Leg Lift</string>
+    <string name="workout12">Russian Twist</string>
+    <string name="workout13">Bridge</string>
+    <string name="workout14">Vertical Leg Crunches</string>
+    <string name="workout15">Wind Mill</string>
     <string name="title_activity_homepage">HomepageActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -61,4 +76,5 @@
     <string name="menu_water">Water Tracker</string>
     <string name="menu_workout">Workouts</string>
     <string name="menu_bmi">BMI Calculator</string>
+    <string name="menu_theme">Change Theme</string>
 </resources>

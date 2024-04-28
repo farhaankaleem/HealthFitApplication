@@ -54,6 +54,11 @@ class RegisterPage : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (password.length < 6) {
+                Toast.makeText(this, "Password should be at least 6 characters", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val name = "$fName $lName"
 
             binding.progressBar.visibility = View.VISIBLE
