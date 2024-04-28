@@ -25,9 +25,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:textColor="#ff000000"
                 android:textStyle="bold"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:textColor="?attr/color" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
                 android:text="01:00 Min"
-                android:textColor="#ff000000"
+                android:textColor="?attr/color"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -67,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:tint="?attr/color"
                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
         </LinearLayout>
     </LinearLayout>

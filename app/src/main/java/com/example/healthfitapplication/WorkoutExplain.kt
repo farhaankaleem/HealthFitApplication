@@ -1,10 +1,13 @@
 package com.example.healthfitapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Button
+import android.widget.ImageView
+import com.example.healthfitapplication.ui.workout.WorkoutListFragment
 
 class WorkoutExplain : AppCompatActivity() {
     private val workoutLayouts = mapOf(
@@ -27,6 +30,7 @@ class WorkoutExplain : AppCompatActivity() {
     private lateinit var countDownTimer : CountDownTimer
     private var isTimeRunning = false
     private lateinit var startButton : Button
+    private lateinit var backButton : ImageView
     private lateinit var stopWatch : Button
     private var timeRemaining : Long = 0
     private var workoutNo : Int = 0
@@ -43,7 +47,11 @@ class WorkoutExplain : AppCompatActivity() {
 
         startButton = findViewById(R.id.startButton)
         stopWatch = findViewById(R.id.time)
+        backButton = findViewById(R.id.back)
 
+        backButton.setOnClickListener {
+            finish()
+        }
         startButton.setOnClickListener{
             if (isTimeRunning) {
                 stopTimer()
