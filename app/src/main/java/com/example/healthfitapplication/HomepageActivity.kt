@@ -6,9 +6,12 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -18,6 +21,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.healthfitapplication.databinding.ActivityHomepageBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuth.AuthStateListener
@@ -37,10 +41,20 @@ class HomepageActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val menuButton: ImageButton = binding.appBarHomepage.buttonDrawerToggle
+        val nightSwitch: Switch = binding.appBarHomepage.darkModeSwitch
 
         menuButton.setOnClickListener{
             drawerLayout.open()
         }
+
+        nightSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
 
         val navView: NavigationView = binding.navView
         val headerView = navView.getHeaderView(0)
@@ -66,7 +80,7 @@ class HomepageActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_homepage)
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_run, R.id.nav_water, R.id.nav_BMI, R.id.nav_workout,
+                R.id.nav_home, R.id.nav_run, R.id.nav_water, R.id.nav_BMI, R.id.nav_workout
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -84,8 +98,6 @@ class HomepageActivity : AppCompatActivity() {
     }
 
     fun logout(menuItem: MenuItem) {
-        Log.d("HomepageActivity", "Clicked on Logout!!!")
-
         val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
         val authStateListener = AuthStateListener { firebaseAuth ->
             if (firebaseAuth.currentUser == null) {
