@@ -72,7 +72,7 @@
     <string name="action_logout">Logoout</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_run">Running</string>
+    <string name="menu_run">Step Tracker</string>
     <string name="menu_water">Water Tracker</string>
     <string name="menu_workout">Workouts</string>
     <string name="menu_bmi">BMI Calculator</string>
