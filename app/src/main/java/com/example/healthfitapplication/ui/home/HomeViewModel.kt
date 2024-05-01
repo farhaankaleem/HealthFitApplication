@@ -3,7 +3,6 @@ package com.example.healthfitapplication.ui.home
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +13,6 @@ import com.google.firebase.database.ValueEventListener
 import java.time.LocalDate
 
 class HomeViewModel : ViewModel() {
-    // Define LiveData objects to hold data
     val userName: MutableLiveData<String> = MutableLiveData()
     val BMI: MutableLiveData<Float> = MutableLiveData()
     val healthCondition: MutableLiveData<String> = MutableLiveData()
@@ -33,7 +31,6 @@ class HomeViewModel : ViewModel() {
     var remainingWater: MutableLiveData<Float> = MutableLiveData()
     var remainingWaterPercent: MutableLiveData<Float> = MutableLiveData()
 
-    // Method to fetch data from database and update LiveData objects
     @RequiresApi(Build.VERSION_CODES.O)
     fun fetchDataAndUpdate() {
         val currentUser = FirebaseAuth.getInstance().currentUser
@@ -152,11 +149,3 @@ class HomeViewModel : ViewModel() {
             }
     }
 }
-
-//class HomeViewModel : ViewModel() {
-//
-//    private val _text = MutableLiveData<String>().apply {
-//        value = ""
-//    }
-//    val text: LiveData<String> = _text
-//}
