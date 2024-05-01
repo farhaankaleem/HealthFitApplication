@@ -11,7 +11,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import java.time.LocalDate
 
 class WorkoutExplain : AppCompatActivity() {
     private val metValues = mapOf(
