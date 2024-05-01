@@ -7,7 +7,6 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,6 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.healthfitapplication.databinding.ActivityRunningBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class RunningFragment : Fragment(), SensorEventListener {
