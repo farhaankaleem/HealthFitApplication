@@ -7,9 +7,6 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.example.healthfitapplication.HomepageActivity
-import com.example.healthfitapplication.R
-import com.example.healthfitapplication.RegisterPage
 import com.example.healthfitapplication.databinding.ActivityLoginPageBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -30,12 +27,12 @@ class LoginPage : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        /*val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)*/
 
         binding.signUp.setOnClickListener {
             val intent = Intent(this, RegisterPage::class.java)
