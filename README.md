@@ -16,7 +16,7 @@ The splash screen is shown once the app is launched. Here I have tried to introd
 
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Splash%20Screen.png?raw=true" alt="Splash Screen" width="400" style="max-width:100%;">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Splash%20Screen.png?raw=true" alt="Splash Screen" width="400" style="max-width:100%;">
 </p>
 
 
@@ -27,7 +27,7 @@ In this phase, the user goals are asked like how many glasses of water they want
 The validation is done for length of the password to be not less than 6 characters.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Registration.png?raw=true" alt="Registration Page" width="400" style="max-width:100%;">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Registration.png?raw=true" alt="Registration Page" width="400" style="max-width:100%;">
 </p>
 
 
@@ -36,7 +36,7 @@ The validation is done for length of the password to be not less than 6 characte
 The login page uses Firebase to authenticate the users into the application. All the fields are made using the Material UI. In both the login page, and the registration page, a small progress bar is attached to show the user that the registration or signing in process is taken place. Password field also has a small eye icon which comes default with input type “textPassword”.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Login.png?raw=true" alt="Login Page" width="400" style="max-width:100%;">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Login.png?raw=true" alt="Login Page" width="400" style="max-width:100%;">
 </p>
 
 
@@ -45,7 +45,7 @@ The login page uses Firebase to authenticate the users into the application. All
 Once the user logs in, he lands into the homepage, which gives all the information to the user about his activities. It shows the health report of the user and shows the remaining calories or steps or glasses the user has to take in order to achieve the goal. It also shows the user their BMI because it is observed that most people keep a close look on their BMI, as that decides the fitness of the user. Changes in any number is immediately reflected here.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Homepage.png?raw=true" alt="Home Page" width="400" style="max-width:100%;">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Homepage.png?raw=true" alt="Home Page" width="400" style="max-width:100%;">
 </p>
 
 
@@ -54,7 +54,7 @@ Once the user logs in, he lands into the homepage, which gives all the informati
 Toolbar has different icons which are used for achieving different objectives. The first icon, the hamburger icon is used to open and close the app drawer. The toggle button is off by default, which shows the day mode. When enabled, it turns on the night mode. ‘themes.xml’ file is used to achieve day / night mode functionality. The last icon is the log out button, which logs the user out of the app and the user is redirected to the login page. Also the toolbar has the heading which changes as the page changes.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Toolbar.png?raw=true" alt="Toolbar" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Toolbar.png?raw=true" alt="Toolbar" width="400">
 </p>
 
 
@@ -63,13 +63,13 @@ Toolbar has different icons which are used for achieving different objectives. T
 The app drawer is opened, once the user clicks on hamburger icon. It has different functionalities like BMI calculator, Step Tracker, Water Tracker, Workouts. Clicking the option loads that specific layout and corresponding bindings are done. In the day and night mode, the icons of the drawer also changes their colour. App drawer also has the email ID and name of the user to show the logged in user.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/AppDrawerDay.png?raw=true" alt="App Drawer Day Mode" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/AppDrawerDay.png?raw=true" alt="App Drawer Day Mode" width="400">
 </p>
 
 
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/AppDrawerNight.png?raw=true" alt="App Drawer Night Mode" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/AppDrawerNight.png?raw=true" alt="App Drawer Night Mode" width="400">
 </p>
 
 
@@ -78,7 +78,7 @@ The app drawer is opened, once the user clicks on hamburger icon. It has differe
 This page or feature, which takes the inputs from the user and puts the corresponding output in the Database and the text view there.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/BMI.png?raw=true" alt="BMI Calculator" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/BMI.png?raw=true" alt="BMI Calculator" width="400">
 </p>
 
 
@@ -87,7 +87,7 @@ This page or feature, which takes the inputs from the user and puts the correspo
 This feature enables the user to measure the steps they have taken in the whole day. This feature uses the sensor to take in the data. The library used for getting the data from the sensor is “android.hardware.Sensor”.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Steps.png?raw=true" alt="Step Tracker" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Steps.png?raw=true" alt="Step Tracker" width="400">
 </p>
 
 
@@ -97,7 +97,7 @@ This feature enables the user to measure the steps they have taken in the whole 
 This feature enables the user to just click a button when they drink a glass of water. It works as a counter to increase the number every time the user drinks water. Once the goal is achieved it shows a toast indicating that the goal is achieved.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Water.png?raw=true" alt="Water Tracker" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Water.png?raw=true" alt="Water Tracker" width="400">
 </p>
 
 
@@ -106,14 +106,14 @@ This feature enables the user to just click a button when they drink a glass of 
 This feature shows the user a list of workouts they can do. One the user clicks on the workout, it takes the user in the workout explanation. In the explanation page and also on the list page there are gif images which are used to show the workouts. To show the GIF images a library called “pl.droidsonroids.gif.GifImageView” is used.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Workouts.png?raw=true" alt="Workouts" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Workouts.png?raw=true" alt="Workouts" width="400">
 </p>
 
 
 Workout Explanation page also has timer of one minute which can be started, paused or finished. Once the timer is finished the corresponding calories burnt is calculated and saved in the Firebase Realtime Database.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/WorkoutExp.png?raw=true" alt="Workout Explanation" width="400">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/WorkoutExp.png?raw=true" alt="Workout Explanation" width="400">
 </p>
 
 
@@ -122,14 +122,14 @@ For timer, the library used is “android.os.CountDownTimer”. Also please note
 ### UML and Class Diagram
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/Relationships.png?raw=true" alt="Relationships" width="600">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/Relationships.png?raw=true" alt="Relationships" width="600">
 </p>
 
 
 The above diagram shows the data flow between the different classes.
 
 <p align="center">
-  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/workout/ClassDiagram.png?raw=true" alt="Class Diagram" width="800">
+  <img src="https://github.com/farhaankaleem/HealthFitApplication/blob/develop/ClassDiagram.png?raw=true" alt="Class Diagram" width="800">
 </p>
 
 The above diagram shows the class diagram and the data flow amongst the classes. From the diagram, it is seen that the viewModel is used to interact with the Database, and that gives data to the fragment.
